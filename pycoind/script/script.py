@@ -219,6 +219,9 @@ def _hash_op(stack, func) -> bool:
 # ————————————————————输出再签名过程—————————————————————————
 
 # 检查签名过程(func指定)，可以重新指定输出问题
+
+# hash_type字段是接在交易后面有一系列编码过程，详情参见笔记内容
+
 def check_signature(signature, public_key, hash_type, subscript, transaction, input_index) -> bool:
     # figure out the hash_type and adjust the signature
     if hash_type == 0:
@@ -238,6 +241,7 @@ def check_signature(signature, public_key, hash_type, subscript, transaction, in
     # SIGHASH_ALL
     if (hash_type & 0x1f) == 0x01 or hash_type == 0:
         # print "ALL"
+        # 构建输入信息
         tx_ins = []
         for (index, tx_in) in enumerate(transaction.inputs):
             script = ''
@@ -249,9 +253,13 @@ def check_signature(signature, public_key, hash_type, subscript, transaction, in
 
         tx_outs = transaction.outputs
 
+        # 到这里输入tx_ins全部封装完成
+        # tx_outs用的是transcation自带的类方法
+
     # SIGHASH_NONE (other tx_in.sequence = 0, tx_out = [ ])
     elif (hash_type & 0x1f) == 0x02:
         # print "NONE"
+        # 构建输入信息
         tx_ins = []
         index = 0
         for tx_in in transaction.inputs:
@@ -270,6 +278,7 @@ def check_signature(signature, public_key, hash_type, subscript, transaction, in
     # SIGHASH_SINGLE (len(tx_out) = input_index + 1, other outputs = (-1, ''), other tx_in.sequence = 0)
     elif (hash_type & 0x1f) == 0x03:
         # print "SINGLE"
+        # 构建输入信息
         tx_ins = []
         index = 0
         for tx_in in transaction.inputs:
@@ -311,7 +320,10 @@ def check_signature(signature, public_key, hash_type, subscript, transaction, in
 
     # compute the data to verify
     # pack(fmt, v1, v2, ...)  ------ 根据所给的fmt描述的格式将值v1，v2，...转换为一个字符串。I对应unsigned int
+    # 生成新的签名哈希
     sig_hash = struct.pack('<I', hash_type)
+
+    # 这一步是在最后一步在签名之后加上hash_type内容，即可完成签名过程
     payload = tx_copy.binary() + sig_hash
 
     # verify the data
@@ -375,10 +387,12 @@ class Tokenizer(object):
         '''Rebuild the script from token start_index, using the callable
            removing tokens that return False for filter(opcode, bytes, value)
            where bytes is the original bytes and value is any literal value.'''
+        # 从开始的坐标重建脚本，并且检查所有脚本是否满足filter格式检查
 
         # tokens里面内置的是一个三元组！！：(opcode,bytes,value)三个部分都存在
         output = ''
         for (opcode, bytes, value) in self._tokens[start_index:]:
+            # 不符合形式的就不添加
             if filter and not filter(opcode, bytes, value):
                 continue
             output += bytes
@@ -565,6 +579,7 @@ class Script(object):
     # 验证某个输入：（输入坐标，脚本）
     def verify_input(self, input_index, pk_script) -> bool:
         input = self._transaction.inputs[input_index]
+
         # 参数：输入签名脚本，公钥脚本，交易，坐标
         return self.process(input.signature_script, pk_script, self._transaction, input_index)
 
@@ -575,7 +590,7 @@ class Script(object):
         # 遍历所有输入的过程
         for i in range(0, len(self._transaction.inputs)):
 
-            # ignore coinbase (generation transaction input)初始模板不具备输入
+            # ignore coinbase (generation transaction input)第一个位置不检查输入
             if self._transaction.index == 0 and i == 0: continue
 
             # verify the input with its previous output
@@ -882,6 +897,7 @@ class Script(object):
                 # 栈内部存放的tokenizer值，其自身的私有属性vector
                 public_key = stack.pop().vector
                 signature = stack.pop().vector
+
                 # 这里用到检查签名的方法，这里的签名是最后剩下的，公钥也是检查过程剩下的
                 valid = check_signature(signature, public_key, hash_type, subscript, transaction, input_index)
 
@@ -894,6 +910,7 @@ class Script(object):
                     stack.append(Zero)
 
             # 这个剩余标记的意思是验证多签过程
+            # 但是我们在模板中并未添加这一部分内容，因此是不被识别的。
             elif opcode == opcodes.OP_CHECKMULTISIG:
                 if len(stack) < 2: return False
 
@@ -968,6 +985,7 @@ class Script(object):
 
         # print "STACK:"
         # print "  " + "\n  ".join(str(i) for i in stack)
+
         # 检查最后剩下的是否为True
         if len(stack) and bool(stack[-1]):
             return True

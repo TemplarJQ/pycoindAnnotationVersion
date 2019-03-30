@@ -69,6 +69,8 @@ import random
 import sqlite3
 import struct
 
+from base58 import buffer
+
 from . import database
 from . import keys
 
@@ -125,7 +127,7 @@ class Transaction(object):
         self._transaction = None
 
     def cache_previous_outputs(self):
-        for i in xrange(0, len(self.inputs)):
+        for i in range(0, len(self.inputs)):
             self.previous_transaction(i)
 
     def previous_transaction(self, index):
@@ -241,7 +243,7 @@ class Database(database.Database):
         loc = (n, q % n)
         if loc not in self._connections:
 
-            locs = [(n, i) for i in xrange(0, n)]
+            locs = [(n, i) for i in range(0, n)]
 
             # doesn't exist; create the files backward
             if not os.path.isfile(self.get_filename(self.get_suffix(n, 0))):
@@ -294,7 +296,7 @@ class Database(database.Database):
                 cursor.execute(self.sql_insert, row)
 
             # (duplicates don't matter)
-            except sqlite3.IntegrityError, e:
+            except sqlite3.IntegrityError as e:
                 if e.message != _KEY_DUP:
                     raise e
 

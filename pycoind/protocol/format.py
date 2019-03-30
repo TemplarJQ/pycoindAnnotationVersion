@@ -225,7 +225,7 @@ class FormatTypeOptional(FormatType):
             value = self._child.validate(obj)
             if value is not None:
                 return value
-        except Exception, e:
+        except Exception as e:
             print e
 
         return self._default
@@ -236,7 +236,7 @@ class FormatTypeOptional(FormatType):
     def parse(self, data):
         try:
             return self._child.parse(data)
-        except Exception, e:
+        except Exception as e:
             pass
         return (0, self._default)
 
@@ -350,7 +350,7 @@ class FormatTypeIPAddress(FormatType):
         # convert each group to its value
         try:
             groups = map(int, obj.split('.'))
-        except ValueError, e:
+        except ValueError as e:
             return None
 
         # too many or not enough groups
@@ -598,7 +598,7 @@ class OutPoint(CompoundType):
     def __eq__(self, other):
         if not isinstance(other, OutPoint):
             return False
-        return (self.hash == other.hash) and (self.index == otehr.index)
+        return (self.hash == other.hash) and (self.index == other.index)
 
 
 class FormatTypeOutPoint(FormatTypeInventoryVector):

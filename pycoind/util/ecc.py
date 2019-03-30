@@ -80,7 +80,7 @@ def sign(data, private_key):
     return key.sign_digest(sha256d(data), sigencode=ecdsa.util.sigencode_der)
 
 
-def verify(data, public_key, signature):
+def verify(data, public_key, signature) -> bool:
     try:
         public_key = decompress_public_key(public_key)
     except ValueError:
