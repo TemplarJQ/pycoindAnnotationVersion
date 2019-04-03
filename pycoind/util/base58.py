@@ -32,7 +32,7 @@ __b58base = len(__b58chars)
 def b58encode(v):
     "encode v, which is a string of bytes, to base58."
 
-    long_value = 0L
+    long_value = 0
     for (i, c) in enumerate(v[::-1]):
         long_value += (256 ** i) * ord(c)
 
@@ -58,7 +58,7 @@ def b58encode(v):
 def b58decode(v, length = None):
     "decode v into a string of len bytes"
 
-    long_value = 0L
+    long_value = 0
     for (i, c) in enumerate(v[::-1]):
         long_value += __b58chars.find(c) * (__b58base ** i)
 
@@ -86,6 +86,7 @@ def b58decode(v, length = None):
 def encode_check(payload):
     'Returns the base58 encoding with a 4-byte checksum.'
 
+    # 截取最后四位
     checksum = sha256d(payload)[:4]
     return b58encode(payload + checksum)
 

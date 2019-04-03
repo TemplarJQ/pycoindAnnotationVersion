@@ -376,8 +376,8 @@ class Tokenizer(object):
         self._process(script)
 
     def append(self, script):
-        self._script += script
-        self._process(script)
+        self._script += script  # 直接添加
+        self._process(script)  # 直接添加tokens.append()
 
     # 原始tokens就是一个包含(opcode, bytes, value)三元组的list，这个函数是为了获取tokens里面的值转化为字符串
     # 示例：
@@ -533,12 +533,13 @@ class Script(object):
 
     # 计算输出地址的格式
     def output_address(self, output_index) -> str:
-        # 输出中获取脚本值
+
+        # 交易输出中获取脚本值
         pk_script = self._transaction.outputs[output_index].pk_script
         # 解析出tokens
         tokens = Tokenizer(pk_script)
 
-        # 验证输出的锁定脚本是哪种验证方式，并将输出地址按照模板整合的过程
+        # 验证输出的锁定脚本是哪种验证方式，并将输出地址按照模板整合的过程，搞定输出的锁定脚本
         if tokens.match_template(TEMPLATE_PAY_TO_PUBKEY_HASH):
             pubkeyhash = tokens.get_value(2).vector
             return util.key.pubkeyhash_to_address(pubkeyhash, self._coin.address_version)
@@ -581,6 +582,10 @@ class Script(object):
         input = self._transaction.inputs[input_index]
 
         # 参数：输入签名脚本，公钥脚本，交易，坐标
+
+        # ——————————————————————这是process！！！！！！！！！！！！！！！！！！！！————————————————————————
+
+        # 他这儿搞了一个前向输出的脚本，这个简单，直接使用固定字段就可以。
         return self.process(input.signature_script, pk_script, self._transaction, input_index)
 
     def verify(self) -> bool:
@@ -590,7 +595,7 @@ class Script(object):
         # 遍历所有输入的过程
         for i in range(0, len(self._transaction.inputs)):
 
-            # ignore coinbase (generation transaction input)第一个位置不检查输入
+            # ignore coinbase (generation transaction input)第一个位置不检查输入，后面输入是本次的输出
             if self._transaction.index == 0 and i == 0: continue
 
             # verify the input with its previous output
@@ -610,6 +615,7 @@ class Script(object):
         tokens = Tokenizer(signature_script, expand_verify=True)
         signature_length = len(tokens)
         # 再加入公钥脚本（即previous_output.pk_script），准备进行解锁操作
+        # 这一部分script不需要重新计算，append方法会自动计算
         tokens.append(pk_script)
 
         # 这个属性等于签名长度，而签名长度又等于tokens的长度

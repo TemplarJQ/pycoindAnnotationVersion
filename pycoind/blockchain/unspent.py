@@ -95,24 +95,25 @@ def verify(transaction):
         # 确认所有输入的值大于输出的值
         if transaction.index != 0:
             # 调用po_value函数
-            sum_in = sum(po_value(transaction, i) for i in xrange(0, len(transaction.inputs)))
+            sum_in = sum(po_value(transaction, i) for i in range(0, len(transaction.inputs)))
             sum_out = sum(o.value for o in transaction.outputs)
             fees = sum_in - sum_out
             if fees < 0:
-                print sum_in, sum_out
-                print "FAIL(sum_in < sum_out)", transaction
+                print(sum_in, sum_out)
+                print("FAIL(sum_in < sum_out)", transaction)
                 return (False, [], 0)
 
         # are all inputs valid against their previous output?
         txio = script.Script(transaction)
         valid = txio.verify()
-        addresses = [txio.output_address(o) for o in xrange(0, txio.output_count)]
+        addresses = [txio.output_address(o) for o in range(0, txio.output_count)]
 
         # 如果验证失败：
         if not valid:
-            print transaction
-
+            print(transaction)
+        # 返回处理结果
         return valid, addresses, fees
+
     except Exception as e:
         print(transaction, e)
         import traceback
@@ -136,7 +137,7 @@ class Database(database.Database):
 
         if processes is None or processes != 1:
             self._pool = multiprocessing.Pool(processes = processes, initializer = init_worker)
-            print "Spawning %d processes" % self._pool._processes
+            print("Spawning %d processes" % self._pool._processes)
         else:
             self._pool = None
 
@@ -212,7 +213,7 @@ class Database(database.Database):
 
         t3 = time.time()
 
-        print "Processed %d transaction (cache=%fs, compute=%fs, update=%fs)" % (len(txns), t1 - t0, t2 - t1, t3 - t2)
+        print("Processed %d transaction (cache=%fs, compute=%fs, update=%fs)" % (len(txns), t1 - t0, t2 - t1, t3 - t2))
 
 
     def _update(self, block, results):
@@ -231,13 +232,14 @@ class Database(database.Database):
             # invalid transaction
             if not valid:
                 raise InvalidTransactionException('temporary')
-                print "invalid", txn
+                print("invalid", txn)
                 continue
 
             # remove each input's previous outputs
-            for i in xrange(0, len(txn.inputs)):
+            for i in range(0, len(txn.inputs)):
                 uock = txn._previous_uock(i)
-                if uock is None: continue
+                if uock is None:
+                    continue
 
                 txck = keys.get_uock_txck(uock)
                 #print '-', keys.get_txck_blockid(txck), keys.get_txck_index(txck), keys.get_uock_index(uock), txn.previous_output(i).value

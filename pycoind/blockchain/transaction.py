@@ -156,7 +156,8 @@ class Transaction(object):
         # 它调用了上面的previous_trasaction()函数
 
         previous_txn = self.previous_transaction(index)
-        if previous_txn is None: return None
+        if previous_txn is None:
+            return None
 
         po = self.inputs[index].previous_output
         return previous_txn.outputs[po.index]

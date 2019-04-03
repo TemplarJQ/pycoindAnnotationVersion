@@ -226,7 +226,7 @@ class FormatTypeOptional(FormatType):
             if value is not None:
                 return value
         except Exception as e:
-            print e
+            print(e)
 
         return self._default
 
@@ -276,8 +276,8 @@ class FormatTypeNumber(FormatType):
         H = (0, 65536),
         i = (-2147483648, 2147483648),
         I = (0, 4294967296),
-        q = (-9223372036854775808L, 9223372036854775808L),
-        Q = (0, 18446744073709551616L)
+        q = (-9223372036854775808, 9223372036854775808),
+        Q = (0, 18446744073709551616)
     )
 
     def validate(self, obj):
@@ -285,7 +285,7 @@ class FormatTypeNumber(FormatType):
         # check type
         if not (self._allow_float and isinstance(obj, float)):
             if self._format[1] in 'qQ':
-                if not isinstance(obj, (int, long)):
+                if not isinstance(obj, (int, int)):
                     return None
             elif not isinstance(obj, int):
                 return None

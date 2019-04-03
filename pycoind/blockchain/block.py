@@ -25,6 +25,8 @@ import math
 import struct
 import time
 
+from base58 import buffer
+
 from . import database
 from . import transaction
 

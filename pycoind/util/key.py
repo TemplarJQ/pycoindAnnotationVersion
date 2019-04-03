@@ -36,19 +36,21 @@ __all__ = [
     'publickey_to_address'
 ]
 
+
 def compress_public_key(public_key):
     if public_key[0] != chr(0x04) or len(public_key) != 65:
         raise ValueError('invalid uncompressed public key')
     y_parity = string_to_number(public_key[33:65])
     return chr(0x02 + (y_parity & 0x01)) + public_key[1:33]
 
+
 _a = curve.curve.a()
 _b = curve.curve.b()
 _p = curve.curve.p()
 _n = curve.order
 
-def decompress_public_key(public_key):
 
+def decompress_public_key(public_key):
     if public_key[0] == chr(0x04) and len(public_key) == 65:
         x = string_to_number(public_key[1:33])
         y = string_to_number(public_key[33:65])
@@ -71,11 +73,12 @@ def decompress_public_key(public_key):
 
 
 # See: https://en.bitcoin.it/wiki/Wallet_import_format
-def privkey_to_wif(privkey, prefix = chr(0x80)):
+def privkey_to_wif(privkey, prefix=chr(0x80)):
     return base58.encode_check(prefix + privkey)
 
+
 # See: https://en.bitcoin.it/wiki/Wallet_import_format
-def privkey_from_wif(privkey, prefix = chr(0x80)):
+def privkey_from_wif(privkey, prefix=chr(0x80)):
     key = base58.decode_check(privkey)
     if prefix != key[0]:
         raise ValueError('wif private key has does not match prefix')
@@ -91,10 +94,11 @@ def privkey_from_wif(privkey, prefix = chr(0x80)):
         return key[1:-1]
     raise ValueError('invalid wif private key')
 
-def pubkeyhash_to_address(publickey_hash, version = chr(0)):
+
+def pubkeyhash_to_address(publickey_hash, version=chr(0)) -> str:
     return base58.encode_check(version + publickey_hash)
 
-# See: https://en.bitcoin.it/wiki/Technical_background_of_Bitcoin_addresses
-def publickey_to_address(publickey, version = chr(0)):
-    return pubkeyhash_to_address(hash160(publickey), version)
 
+# See: https://en.bitcoin.it/wiki/Technical_background_of_Bitcoin_addresses
+def publickey_to_address(publickey, version=chr(0)):
+    return pubkeyhash_to_address(hash160(publickey), version)
