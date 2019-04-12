@@ -26,6 +26,7 @@ import random
 import socket
 import sys
 import time
+from filecmp import cmp
 
 from . import connection
 from .. import coins, protocol, util
@@ -132,7 +133,7 @@ class BaseNode(asyncore.dispatcher, object):
                 self._address = self.getsockname()
 
         # port in use... Maybe already running.
-        except socket.error, e:
+        except socket.error as e:
             if e.errno == 48:
                 raise AddressInUseException()
             raise e
@@ -239,7 +240,7 @@ class BaseNode(asyncore.dispatcher, object):
 
         try:
             asyncore.loop(5, map = self)
-        except StopNode, e:
+        except StopNode as e:
             pass
         finally:
             self.handle_close()
@@ -266,7 +267,7 @@ class BaseNode(asyncore.dispatcher, object):
         try:
             # asyncore keeps a reference in the map (ie. node = self)
             connection.Connection(address = address, node = self)
-        except Exception, e:
+        except Exception as e:
             self.log(str(e))
             return False
 
@@ -482,7 +483,7 @@ class BaseNode(asyncore.dispatcher, object):
         peers = self.peers
 
         # if we need more peer connections, attempt to add some (up to 5 at a time)
-        for i in xrange(0, min(self._seek_peers - len(peers), 5)):
+        for i in range(0, min(self._seek_peers - len(peers), 5)):
             self.add_any_peer()
 
         # if we don't have many addresses ask any peer for some more

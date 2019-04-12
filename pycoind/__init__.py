@@ -22,13 +22,13 @@
 
 
 # import top levels
-import blockchain
-import coins
-import node
-import protocol
-import script
-import util
-import wallet
+from pycoind import blockchain
+from pycoind import coins
+from pycoind import node
+from pycoind import protocol
+from pycoind import script
+from pycoind import util
+from pycoind import wallet
 
 
 # expose version

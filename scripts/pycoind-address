@@ -68,12 +68,12 @@ if __name__ == '__main__':
     # dump the results in a human readable or json format
     def dump_results(info):
         if args.json:
-            print json.dumps(dict((k.lower(), v) for (k, v) in info))
+            print(json.dumps(dict((k.lower(), v) for (k, v) in info)))
         else:
             w = max(len(k) for (k, v) in info)
             for (k, v) in info:
                 pad = ' ' * (w - len(k))
-                print "%s:%s %s" % (k, pad, v)
+                print("%s:%s %s" % (k, pad, v))
 
     # get the coin by either name (eg. bitcoin) or symbol (eg. btc)
     coin = pycoind.coins.get_coin(name = args.coin)
@@ -134,7 +134,7 @@ if __name__ == '__main__':
         if key is None:
             key_show = key
             if key_secure and not args.show_private: key_show = '**redacted**'
-            print "Unsupported address: %s" % key_show
+            print ("Unsupported address: %s" % key_show)
             exit()
 
         address = pycoind.wallet.get_address(key, coin = coin)
@@ -159,7 +159,7 @@ if __name__ == '__main__':
         if hasattr(address, 'encrypt'):
             address = address.encrypt(encrypt_password)
         else:
-            print "Cannot encrypt password"
+            print("Cannot encrypt password")
             exit()
 
     # prepare all the address' info for printing

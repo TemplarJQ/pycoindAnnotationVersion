@@ -72,10 +72,6 @@ def _is_hash256(opcode, bytes, data) -> bool:
     return True
 
 
-def _too_long(opcode, bytes, data) -> bool:
-    return False
-
-
 # —————————————————————脚本验证模板——————————————————————
 
 SCRIPT_FORM_NON_STANDARD = 'non-standard'
@@ -223,13 +219,14 @@ def _hash_op(stack, func) -> bool:
 # hash_type字段是接在交易后面有一系列编码过程，详情参见笔记内容
 
 def check_signature(signature, public_key, hash_type, subscript, transaction, input_index) -> bool:
+
     # figure out the hash_type and adjust the signature
     if hash_type == 0:
         hash_type = ord(signature[-1])
     if hash_type != ord(signature[-1]):
         raise Exception('@todo: should I check for this?')
     signature = signature[:-1]
-    # 尾部出栈
+    # 尾部出栈 去掉sig_hash部分内容
 
     # print hash_type
 

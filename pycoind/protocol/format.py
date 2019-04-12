@@ -249,7 +249,7 @@ class FormatTypeOptional(FormatType):
 # Simple formats (don't use any CompoundTypes nor FormatTypes)
 
 class FormatTypeNumber(FormatType):
-    '''Number format.
+    """Number format.
 
        Allows the object type to be the expected_type (default: int) using
        the endian and format to pack the value (default: little endian, signed
@@ -260,7 +260,7 @@ class FormatTypeNumber(FormatType):
        Possible Formats:
            b, B - signed, unsigned 1-byte char
            i, I - signed, unsigned 4-byte integer
-           q, Q - signed, unsigned 8-byte integer'''
+           q, Q - signed, unsigned 8-byte integer"""
 
 
     def __init__(self, format = 'i', big_endian = False, allow_float = False):
@@ -614,9 +614,9 @@ class TxnIn(CompoundType):
 
 
 class FormatTypeTxnIn(FormatTypeCompoundType):
-    '''TxnIn format.
+    """TxnIn format.
 
-       The properties must be a TxnIn.'''
+       The properties must be a TxnIn."""
 
     expected_type = TxnIn
 

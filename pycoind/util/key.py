@@ -19,7 +19,9 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+import hashlib
 
+from base58 import b58encode_check
 
 from . import base58
 
@@ -102,3 +104,12 @@ def pubkeyhash_to_address(publickey_hash, version=chr(0)) -> str:
 # See: https://en.bitcoin.it/wiki/Technical_background_of_Bitcoin_addresses
 def publickey_to_address(publickey, version=chr(0)):
     return pubkeyhash_to_address(hash160(publickey), version)
+
+
+def pubkey_to_address(cls, pubkey: bytes) -> str:
+    if 'ripemd160' not in hashlib.algorithms_available:
+        raise RuntimeError('missing ripemd160 hash algorithm')
+
+    sha = hashlib.sha256(pubkey).digest()
+    ripe = hashlib.new('ripemd160', sha).digest()
+    return str(b58encode_check(b'\x00' + ripe))

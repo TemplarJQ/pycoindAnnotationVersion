@@ -3,13 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="399f1ba2-9982-45e8-af29-afa2104e05f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycoind/blockchain/block.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/blockchain/block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycoind/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pycoind/blockchain/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/blockchain/transaction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pycoind/blockchain/unspent.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/blockchain/unspent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycoind/node/basenode.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/node/basenode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycoind/node/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/node/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycoind/node/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/node/node.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pycoind/protocol/format.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/protocol/format.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pycoind/script/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/script/script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycoind/util/base58.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/util/base58.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pycoind/util/key.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycoind/util/key.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pycoind-address" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pycoind-address" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-script.py" beforeDir="false" afterPath="$PROJECT_DIR$/test-script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test-blockchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test-blockchain.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,78 +22,109 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/pycoindAnnotation$test.coverage" NAME="test Coverage Results" MODIFIED="1554989510972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pycoind/script" />
+    <SUITE FILE_PATH="coverage/pycoindAnnotation$text.coverage" NAME="text Coverage Results" MODIFIED="1554989789664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pycoind/script/script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1592">
-              <caret line="545" lean-forward="true" selection-start-line="545" selection-end-line="545" />
+            <state relative-caret-position="-1065">
+              <caret line="223" column="22" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
               <folding>
                 <element signature="e#2072#2188#0" />
-                <element signature="e#2239#2251#0" />
                 <element signature="e#2674#2743#0" />
-                <element signature="e#3425#3879#0" />
                 <element signature="e#3996#4563#0" />
                 <element signature="e#4644#5576#0" />
                 <element signature="e#5635#5984#0" />
-                <element signature="e#6584#7013#0" />
-                <element signature="e#7036#7447#0" />
-                <element signature="e#7599#8266#0" />
-                <element signature="e#8496#8683#0" />
-                <element signature="e#9807#15260#0" />
-                <element signature="e#11564#12050#0" />
-                <element signature="e#15555#15592#0" />
-                <element signature="e#16494#16748#0" />
-                <element signature="e#16829#17082#0" />
-                <element signature="e#17156#17192#0" />
-                <element signature="e#18306#32150#0" />
+                <element signature="e#16824#17078#0" />
+                <element signature="e#17159#17412#0" />
+                <element signature="e#18780#32711#0" />
+                <element signature="e#29742#29760#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pycoind/blockchain/unspent.py">
+        <entry file="file://$PROJECT_DIR$/text.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="139" column="16" lean-forward="true" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
+            <state relative-caret-position="229">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
               <folding>
-                <element signature="e#1977#1991#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/txnmake/secp256k1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="141" column="33" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pycoind/blockchain/transaction.py">
+        <entry file="file://$PROJECT_DIR$/test-script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="-4823">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>script_form</find>
-      <find>verify</find>
-      <find>output_count</find>
-      <find>TxnIn</find>
-      <find>FlexTxn</find>
-      <find>TxnOU</find>
-      <find>FormatTypeVarString</find>
       <find>TxnOut</find>
       <find>_is_pubkey</find>
       <find>_too_long</find>
       <find>_is_hash256</find>
       <find>input_index</find>
-      <find>output_address</find>
-      <find>FormatTypeVarInteger</find>
-      <find>previous_output(</find>
       <find>signature_length</find>
+      <find>output_address</find>
+      <find>verify</find>
+      <find>previous_output(</find>
+      <find>po_value</find>
+      <find>unspent</find>
+      <find>previous_output</find>
+      <find>_co</find>
+      <find>pubkey_to_address</find>
+      <find>signature</find>
+      <find>FormatTypeNumber</find>
+      <find>FormatTypeVarInteger</find>
+      <find>FormatTypeOutPoint</find>
+      <find>FormatTypeInventoryVector</find>
+      <find>FormatTypeCompoundType</find>
+      <find>FormatTypeArray</find>
+      <find>Transaction</find>
+      <find>protocol</find>
+      <find>TxnIn</find>
+      <find>Txn</find>
+      <find>parse</find>
+      <find>CompoundType</find>
+      <find>FormatTypeVarString</find>
+      <find>public_key</find>
+      <find>txn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,19 +135,35 @@
       <list>
         <option value="$PROJECT_DIR$/build/lib/pycoind/blockchain/transaction.py" />
         <option value="$PROJECT_DIR$/pycoind/util/ecc.py" />
-        <option value="$PROJECT_DIR$/pycoind/util/key.py" />
         <option value="$PROJECT_DIR$/pycoind/blockchain/block.py" />
-        <option value="$PROJECT_DIR$/pycoind/script/script.py" />
-        <option value="$PROJECT_DIR$/pycoind/blockchain/transaction.py" />
-        <option value="$PROJECT_DIR$/pycoind/blockchain/unspent.py" />
         <option value="$PROJECT_DIR$/pycoind/util/base58.py" />
+        <option value="$PROJECT_DIR$/pycoind/blockchain/unspent.py" />
+        <option value="$PROJECT_DIR$/pycoind/blockchain/transaction.py" />
+        <option value="$PROJECT_DIR$/pycoind/util/key.py" />
+        <option value="$PROJECT_DIR$/pycoind/node/node.py" />
+        <option value="$PROJECT_DIR$/pycoind/node/basenode.py" />
+        <option value="$PROJECT_DIR$/pycoind/node/connection.py" />
+        <option value="$PROJECT_DIR$/scripts/pycoind-address" />
+        <option value="$PROJECT_DIR$/test-script.py" />
         <option value="$PROJECT_DIR$/pycoind/protocol/format.py" />
+        <option value="$PROJECT_DIR$/pycoind/script/script.py" />
+        <option value="$PROJECT_DIR$/pycoind/script/test.py" />
+        <option value="$PROJECT_DIR$/pycoind/__init__.py" />
+        <option value="$PROJECT_DIR$/pycoind/script/scriptBuild.py" />
+        <option value="$PROJECT_DIR$/text.py" />
+        <option value="$PROJECT_DIR$/tests/test-blockchain.py" />
+        <option value="$PROJECT_DIR$/txnmake/gen_keypair.py" />
+        <option value="$PROJECT_DIR$/txnmake/gen_rawtx.py" />
+        <option value="$PROJECT_DIR$/txnmake/opcodes.py" />
+        <option value="$PROJECT_DIR$/txnmake/secp256k1.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="-270" />
+    <option name="y" value="-1080" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -138,25 +190,12 @@
               <item name="pycoindAnnotation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pycoindAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="pycoind" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pycoindAnnotation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycoindAnnotation" type="462c0819:PsiDirectoryNode" />
-              <item name="pycoind" type="462c0819:PsiDirectoryNode" />
-              <item name="protocol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pycoindAnnotation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycoindAnnotation" type="462c0819:PsiDirectoryNode" />
-              <item name="pycoind" type="462c0819:PsiDirectoryNode" />
               <item name="script" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pycoindAnnotation" type="b2602c69:ProjectViewProjectNode" />
               <item name="pycoindAnnotation" type="462c0819:PsiDirectoryNode" />
-              <item name="pycoind" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="txnmake" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -183,6 +222,58 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Python.text">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pycoindAnnotation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pycoind/script" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pycoind/script/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="text" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pycoindAnnotation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.text" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -193,19 +284,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553827280189</updated>
-      <workItem from="1553827281949" duration="29131000" />
+      <workItem from="1553827281949" duration="38635000" />
+      <workItem from="1554545095124" duration="3183000" />
+      <workItem from="1554609731148" duration="46645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29131000" />
+    <option name="totallyTimeSpent" value="88463000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-270" y="-1080" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19116081" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.30843374" />
@@ -214,8 +307,8 @@
       <window_info anchor="bottom" id="Python Console" order="4" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.25049505" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32871288" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -238,29 +331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycoind/util/ecc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pycoind/protocol/messages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1691">
-          <caret line="282" column="50" selection-start-line="282" selection-start-column="50" selection-end-line="282" selection-end-column="50" />
-          <folding>
-            <element signature="e#1533#2487#0" />
-            <element signature="e#5726#6539#0" />
-            <element signature="e#6646#6886#0" />
-            <element signature="e#6920#7163#0" />
-            <element signature="e#7196#7237#0" />
-            <element signature="e#7271#7314#0" />
-            <element signature="e#7347#7725#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/lib/pycoind/blockchain/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -271,98 +341,375 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycoind/blockchain/block.py">
+    <entry file="file://$PROJECT_DIR$/pycoind/util/base58.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+        <state relative-caret-position="478">
+          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pycoind/blockchain/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="15">
           <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pycoind/blockchain/keys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+        <state relative-caret-position="267">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycoind/blockchain/unspent.py">
+    <entry file="file://$PROJECT_DIR$/pycoind/coins/bitcoin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="139" column="16" lean-forward="true" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
-          <folding>
-            <element signature="e#1977#1991#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="321">
+          <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycoind/protocol/format.py">
+    <entry file="file://$PROJECT_DIR$/pycoind/coins/coin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="317" lean-forward="true" selection-start-line="317" selection-end-line="317" />
-          <folding>
-            <element signature="e#5600#6235#0" />
-            <element signature="e#6280#6658#0" />
-            <element signature="e#10375#12418#0" />
-            <element signature="e#12460#13009#0" />
-            <element signature="e#13624#14946#0" />
-          </folding>
+        <state relative-caret-position="-671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-35">
+            <caret line="778" column="26" selection-start-line="778" selection-start-column="26" selection-end-line="778" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/lib/pycoind/blockchain/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/blockchain/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pycoind/blockchain/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="41">
+          <caret line="92" column="17" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="17" />
+          <folding>
+            <element signature="e#2842#2851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/util/key.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#1118#1132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/pycoind-address">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-730">
+          <caret line="102" column="51" lean-forward="true" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pycoind/util/hash.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycoind/util/base58.py">
+    <entry file="file://$PROJECT_DIR$/pycoind/util/piecewise.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="239">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycoind/util/key.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+        <state relative-caret-position="-618" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/node/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/protocol/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/blockchain/unspent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+          <folding>
+            <element signature="e#1977#1991#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/wallet/address.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1788">
+          <caret line="75" column="49" lean-forward="true" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/blockchain/block.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3020">
+          <caret line="70" column="37" lean-forward="true" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+          <folding>
+            <element signature="e#1120#1131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/scripts-2.7/pycoind-address">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/lib/pycoind/wallet/address.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322">
+          <caret line="51" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/node/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="107" column="21" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/protocol/messages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="260" column="24" lean-forward="true" selection-start-line="260" selection-start-column="24" selection-end-line="260" selection-end-column="24" />
+          <folding>
+            <element signature="e#1120#1134#0" expanded="true" />
+            <element signature="e#1533#2487#0" />
+            <element signature="e#5726#6539#0" />
+            <element signature="e#6646#6886#0" />
+            <element signature="e#6920#7163#0" />
+            <element signature="e#7196#7237#0" />
+            <element signature="e#7271#7314#0" />
+            <element signature="e#7347#7725#0" />
+            <element signature="e#8281#9398#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/protocol/format.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="517" selection-start-line="517" selection-end-line="517" />
+          <folding>
+            <element signature="e#1120#1133#0" expanded="true" />
+            <element signature="e#1704#2079#0" />
+            <element signature="e#2279#2812#0" />
+            <element signature="e#6703#7439#0" />
+            <element signature="e#7545#9426#0" />
+            <element signature="e#9474#10307#0" />
+            <element signature="e#10376#12421#0" />
+            <element signature="e#12463#13012#0" />
+            <element signature="e#13627#14949#0" />
+            <element signature="e#15362#15597#0" />
+            <element signature="e#15660#15773#0" />
+            <element signature="e#15854#16249#0" />
+            <element signature="e#16330#16437#0" />
+            <element signature="e#16501#16618#0" />
+            <element signature="e#16680#17023#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/util/ecc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="90" column="51" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/node/basenode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="315" column="95" selection-start-line="315" selection-start-column="92" selection-end-line="315" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/script/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="true" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pycoind/script/script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1592">
-          <caret line="545" lean-forward="true" selection-start-line="545" selection-end-line="545" />
+        <state relative-caret-position="-1065">
+          <caret line="223" column="22" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
           <folding>
             <element signature="e#2072#2188#0" />
-            <element signature="e#2239#2251#0" />
             <element signature="e#2674#2743#0" />
-            <element signature="e#3425#3879#0" />
             <element signature="e#3996#4563#0" />
             <element signature="e#4644#5576#0" />
             <element signature="e#5635#5984#0" />
-            <element signature="e#6584#7013#0" />
-            <element signature="e#7036#7447#0" />
-            <element signature="e#7599#8266#0" />
-            <element signature="e#8496#8683#0" />
-            <element signature="e#9807#15260#0" />
-            <element signature="e#11564#12050#0" />
-            <element signature="e#15555#15592#0" />
-            <element signature="e#16494#16748#0" />
-            <element signature="e#16829#17082#0" />
-            <element signature="e#17156#17192#0" />
-            <element signature="e#18306#32150#0" />
+            <element signature="e#16824#17078#0" />
+            <element signature="e#17159#17412#0" />
+            <element signature="e#18780#32711#0" />
+            <element signature="e#29742#29760#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/script/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1120#1134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/coins/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#1120#1147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4823">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test-piecewise.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test-ecc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test-script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#35431#35930#0" />
+            <element signature="e#35970#39023#0" />
+            <element signature="e#39064#39395#0" />
+            <element signature="e#39536#40461#0" />
+            <element signature="e#40507#42223#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycoind/script/scriptBuild.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test-blockchain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3390">
+          <caret line="226" column="16" lean-forward="true" selection-start-line="226" selection-start-column="16" selection-end-line="226" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txnmake/gen_keypair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="409" selection-start-line="409" selection-end-line="409" />
+          <folding>
+            <element signature="e#16#26#0" expanded="true" />
+            <element signature="e#229#847#0" />
+            <element signature="e#870#1792#0" />
+            <element signature="e#1812#3127#0" />
+            <element signature="e#3148#5166#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txnmake/gen_rawtx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="377" column="23" lean-forward="true" selection-start-line="377" selection-start-column="23" selection-end-line="377" selection-end-column="23" />
+          <folding>
+            <element signature="e#16#26#0" expanded="true" />
+            <element signature="e#229#847#0" />
+            <element signature="e#870#1792#0" />
+            <element signature="e#1812#3127#0" />
+            <element signature="e#3148#5166#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txnmake/opcodes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="439" column="71" selection-start-line="439" selection-start-column="71" selection-end-line="439" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txnmake/secp256k1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="141" column="33" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>

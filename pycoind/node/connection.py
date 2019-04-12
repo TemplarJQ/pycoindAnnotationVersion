@@ -89,7 +89,7 @@ class Connection(asyncore.dispatcher):
             try:
                 self.create_socket(socket.AF_INET, socket.SOCK_STREAM)
                 self.connect(address)
-            except Exception, e:
+            except Exception as e:
                 self.handle_close()
                 raise e
 
@@ -173,7 +173,7 @@ class Connection(asyncore.dispatcher):
         # read some data and add it to our incoming buffer
         try:
             chunk = self.recv(BLOCK_SIZE)
-        except Exception, e:
+        except Exception as e:
             chunk = ''
 
         # remote connection closed
@@ -199,9 +199,9 @@ class Connection(asyncore.dispatcher):
             try:
                 message = protocol.Message.parse(payload, self.node.coin.magic)
                 self.handle_message(message)
-            except protocol.UnknownMessageException, e:
+            except protocol.UnknownMessageException as e:
                 self.node.invalid_command(self, self._recv_buffer[:length], e)
-            except protocol.MessageFormatException, e:
+            except protocol.MessageFormatException as e:
                 self.node.invalid_command(self, self._recv_buffer[:length], e)
 
             # remove the message bytes from the buffer
@@ -218,7 +218,7 @@ class Connection(asyncore.dispatcher):
             self._tx_bytes += sent
             self.node._tx_bytes += sent
             self._last_tx_time = time.time()
-        except Exception, e:
+        except Exception as e:
             self.handle_close()
             return
 
@@ -240,7 +240,7 @@ class Connection(asyncore.dispatcher):
     def handle_close(self):
         try:
             self.close()
-        except Exception, e:
+        except Exception as e:
             pass
 
         self.node.disconnected(self)

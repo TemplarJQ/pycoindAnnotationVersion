@@ -115,7 +115,7 @@ class Node(BaseNode):
             if block.hash in self._incomplete_blocks:
                 del self._incomplete_blocks[block.hash]
 
-        except blockchain.block.InvalidBlockException, e:
+        except blockchain.block.InvalidBlockException as e:
             self.log('invalid block header: %s (%s)' % (header.hash.encode('hex'), e.message), level = self.LOG_LEVEL_DEBUG)
             self.punish_peer(peer, str(e))
 
@@ -199,7 +199,7 @@ class Node(BaseNode):
                     new_headers = True
                 else:
                     self.log('block header already exists: %s' % header.hash.encode('hex'), level = self.LOG_LEVEL_DEBUG)
-            except blockchain.block.InvalidBlockException, e:
+            except blockchain.block.InvalidBlockException as e:
                 self.log('invalid block header: %s (%s)' % (header.hash.encode('hex'), e.message), level = self.LOG_LEVEL_DEBUG)
                 self.punish_peer(peer, str(e))
 

@@ -248,7 +248,7 @@ class Database(database.Database):
         loc = (n, q % n)
         if loc not in self._connections:
 
-            locs = [(n, i) for i in xrange(0, n)]
+            locs = [(n, i) for i in range(0, n)]
 
             # doesn't exist; create the files backward
             if not os.path.isfile(self.get_filename(self.get_suffix(n, 0))):

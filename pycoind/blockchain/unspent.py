@@ -244,6 +244,7 @@ class Database(database.Database):
                 txck = keys.get_uock_txck(uock)
                 #print '-', keys.get_txck_blockid(txck), keys.get_txck_index(txck), keys.get_uock_index(uock), txn.previous_output(i).value
 
+                # 更新UTXO的过程
                 cursor.execute(self.sql_delete, (uock, ))
                 if cursor.rowcount != 1:
                     raise Exception('bad state: failed to delete a utxo')
